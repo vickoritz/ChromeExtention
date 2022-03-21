@@ -7,8 +7,8 @@ const ulEl = document.getElementById("ul-el")
 
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
+    inputEl.value = ""
     renderLeads()
-    clearFields()
 })
 
 function renderLeads() {
@@ -17,8 +17,4 @@ function renderLeads() {
         listItems += "<li>" + myLeads[i] + "</li>"
     }
     ulEl.innerHTML = listItems
-}
-
-function clearFields() {
-    document.getElementById("input-el").value ="";
 }
