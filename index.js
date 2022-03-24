@@ -43,7 +43,9 @@ inputBtn.addEventListener("click", function() {
 })
 
 
-tabBtn.addEventListener("click", function() {
-    //return(tabs[0])
-    console.log(tabs[0].url)
+tabBtn.addEventListener("click", function(){
+    myLeads.push(tabBtn.value)
+    tabBtn.value = ""
+    localStorage.setItem("myLeads", JSON.stringify( myLeads) )
+    render(myLeads)
 })
